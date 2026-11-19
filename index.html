@@ -1,377 +1,553 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Asmaa Samy · AI Engineer</title>
-<meta name="description" content="AI engineer building OCR, RAG and agent systems, from model training to deployed services. Every number on this page shows how it was measured.">
+<meta name="description" content="AI engineer building computer vision, OCR, RAG and LLM agent systems in Arabic and English, from model training to deployed services.">
 <meta property="og:title" content="Asmaa Samy · AI Engineer">
 <meta property="og:description" content="OCR, RAG and LLM agent systems, shipped and measured.">
-<meta property="og:image" content="photo.jpg">
-<meta name="theme-color" content="#0B1A5C">
+<meta property="og:image" content="https://asmaasamyhagag22-design.github.io/card/photo.jpg">
+<meta property="og:url" content="https://asmaasamyhagag22-design.github.io/card/">
+<meta name="theme-color" content="#0A0C10">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0C10'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%235EEAD4'%3EAS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F4F6FA; --white:#FFFFFF; --ink:#101733; --soft:#4A5370; --faint:#7B839C; --line:#DDE2EE;
-  --navy:#0B1A5C; --royal:#2445E0; --sky:#6E9BFF; --verify:#0A8A5F; --ev:#EAF0FF;
-  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --bg:#0A0C10; --bg2:#0E1117; --card:#12161D; --card2:#161B23;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+  --text:#E9ECF2; --soft:#A3ABBA; --faint:#6E7787;
+  --teal:#5EEAD4; --blue:#7AA7FF; --amber:#F5B95C;
+  --grad:linear-gradient(100deg,#5EEAD4 0%,#7AA7FF 100%);
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --arabic:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --r:18px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--royal);text-decoration:none}
-a:hover{text-decoration:underline;text-underline-offset:3px}
-:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
-img{display:block;max-width:100%}
-
-/* ---------- layout ---------- */
-.page{min-height:100vh}
-.rail{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.rail-in{padding:36px 24px 30px;max-width:640px;margin:0 auto;position:relative}
-.net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
-main{max-width:680px;margin:0 auto;padding:8px 24px 64px}
-@media (min-width:1000px){
-  .page{display:grid;grid-template-columns:minmax(340px,400px) 1fr}
-  .rail{position:sticky;top:0;height:100vh}
-  .rail-in{padding:56px 40px;height:100%;display:flex;flex-direction:column}
-  main{margin:0;padding:64px 64px 96px;max-width:780px}
-}
-
-/* ---------- identity rail ---------- */
-.me{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.9)}
-.names{margin-top:18px}
-h1{font-size:34px;line-height:1.1;font-weight:700;letter-spacing:-.5px}
-.ar{font-family:var(--arabic);font-weight:500;font-size:20px;color:#C9D6FF;margin-top:4px;direction:rtl;text-align:left}
-.role{margin-top:14px;font-size:17px;line-height:1.5;color:#E3E9FF;max-width:30ch}
-.open{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;color:#fff;
-      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:5px 12px 5px 10px;border-radius:999px}
-.open i{width:8px;height:8px;border-radius:50%;background:#45E3A8;box-shadow:0 0 0 3px rgba(69,227,168,.22)}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 14px;border-radius:12px;
-     font-weight:600;font-size:15px;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25)}
-.btn:hover{text-decoration:none;background:rgba(255,255,255,.16)}
-.btn.cv{grid-column:1/-1;background:#fff;color:var(--navy);border-color:#fff;font-size:16px}
-.btn.cv:hover{background:#E8EEFF}
-.btn svg{width:18px;height:18px;flex:none}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:16.5px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+::selection{background:rgba(94,234,212,.28)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hidden{display:none!important}
-.rail .btn.save{grid-column:1/-1}
-.rail .actions.has-info .btn.save{grid-column:auto}
-.contact{margin-top:22px;font-size:14.5px;line-height:1.9;color:#C9D6FF}
-.contact a{color:#fff}
-.rail .tip{margin-top:auto;padding-top:24px;font-size:13.5px;color:#AFC0F5;max-width:32ch}
-@media (max-width:999px){ .rail .tip{display:none} }
 
-/* ---------- content ---------- */
-.lede{font-size:21px;line-height:1.5;font-weight:400;margin-top:28px;max-width:34ch}
-.lede strong{font-weight:600}
-.howto{margin-top:14px;font-size:15px;color:var(--soft);display:flex;gap:10px;align-items:flex-start;max-width:52ch}
-.howto .sample{flex:none}
-@media (min-width:1000px){ .lede{margin-top:0;font-size:24px} }
+/* backdrop */
+.bgfx{position:absolute;inset:0 0 auto 0;height:900px;pointer-events:none;z-index:0;overflow:hidden}
+.bgfx:before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);opacity:.55}
+.bgfx:after{content:"";position:absolute;width:900px;height:600px;left:50%;top:-260px;transform:translateX(-30%);
+  background:radial-gradient(closest-side,rgba(94,234,212,.16),rgba(122,167,255,.08) 55%,transparent);filter:blur(10px)}
 
-section{margin-top:56px}
-h2{font-size:24px;line-height:1.25;font-weight:700;letter-spacing:-.2px}
-.sub{color:var(--soft);font-size:15.5px;margin-top:4px;max-width:56ch}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(10,12,16,.72);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+.brand i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:12.5px;font-weight:800;
+  color:#0A0C10;background:var(--grad)}
+.menu{display:flex;gap:4px;align-items:center}
+.menu a{font-size:14.5px;color:var(--soft);padding:8px 12px;border-radius:999px;transition:color .15s,background .15s}
+.menu a:hover,.menu a.on{color:var(--text);background:rgba(255,255,255,.05)}
+.menu a.cvbtn{color:#0A0C10;background:var(--text);font-weight:600;margin-left:8px;padding:8px 16px}
+.menu a.cvbtn:hover{background:#fff}
+@media (max-width:760px){.menu a:not(.cvbtn){display:none}}
 
-/* project */
-.proj{margin-top:30px;padding-left:18px;border-left:3px solid var(--line)}
-.proj.prod{border-left-color:var(--verify)}
-.proj h3{font-size:20px;line-height:1.3;font-weight:700}
-.status{display:inline-block;margin-top:6px;font-size:13.5px;font-weight:600;padding:2px 10px;border-radius:999px}
-.status.live{background:#E2F6EE;color:var(--verify)}
-.status.demo{background:var(--ev);color:var(--royal)}
-.status.code{background:#EEF0F5;color:var(--soft)}
-.proj .what{margin-top:10px;color:var(--soft);max-width:58ch}
-.claims{list-style:none;margin-top:12px}
-.claims>li{position:relative;padding-left:22px;margin-top:10px;max-width:60ch}
-.claims>li:before{content:"";position:absolute;left:3px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--sky)}
-.proj.prod .claims>li:before{background:var(--verify)}
-.stack{margin-top:14px;font-size:14.5px;color:var(--faint)}
-.links{margin-top:10px;display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15.5px}
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 20px;border-radius:12px;font-weight:600;font-size:15px;
+  border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--text);transition:transform .15s,background .15s,border-color .15s}
+.btn:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.24);transform:translateY(-1px)}
+.btn.primary{background:var(--text);color:#0A0C10;border-color:var(--text)}
+.btn.primary:hover{background:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+.icon{width:46px;padding:0;justify-content:center}
 
-/* evidence citation: the one memorable device */
-.cite{font:inherit;font-weight:600;color:var(--ink);background:linear-gradient(transparent 62%,#CFDCFF 62%);
-      border:0;padding:0 1px;cursor:pointer;border-radius:2px;white-space:nowrap}
-.cite sup{font-size:.62em;color:var(--royal);margin-left:1px;font-weight:700}
-.cite[aria-expanded="true"]{background:#CFDCFF}
-.ev{display:block;margin:8px 0 2px;padding:10px 12px 10px 14px;background:var(--ev);border-left:3px solid var(--royal);
-    border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.55;color:#1D2750}
-.ev[hidden]{display:none}
-@media (prefers-reduced-motion:no-preference){
-  .ev:not([hidden]){animation:open .22s ease-out}
-  @keyframes open{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+/* hero */
+.hero{position:relative;z-index:1;padding:88px 0 56px}
+.hero .wrap{display:grid;gap:48px;align-items:center}
+@media (min-width:940px){.hero .wrap{grid-template-columns:1.35fr .8fr;gap:64px}.hero{padding:112px 0 72px}}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;color:var(--soft);padding:6px 14px 6px 10px;
+  border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.03)}
+.pill b{width:8px;height:8px;border-radius:50%;background:#34D399;box-shadow:0 0 0 4px rgba(52,211,153,.18);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(52,211,153,.05)}}
+@media (prefers-reduced-motion:reduce){.pill b{animation:none}}
+.mini{display:none}
+@media (max-width:939px){
+  .idcard{display:none}
+  .hello{display:none}
+  .hero{padding:44px 0 48px}
+  .mini{display:flex;align-items:center;gap:14px;margin-top:22px}
+  .mini img{width:64px;height:64px;border-radius:50%;object-fit:cover;background:#D9DEE6;box-shadow:0 0 0 2px var(--bg),0 0 0 4px rgba(94,234,212,.55)}
+  .mini b{display:block;font-size:19px;letter-spacing:-.01em}
+  .mini span{display:block;font-size:14px;color:var(--soft)}
+  .mini span[lang]{font-family:var(--arabic)}
+  h1{margin-top:18px}
 }
+.hello{margin-top:26px;font-size:18px;color:var(--soft);font-weight:500}
+.hello strong{color:var(--text);font-weight:600}
+h1{margin-top:10px;font-size:clamp(38px,6.2vw,66px);line-height:1.04;letter-spacing:-.035em;font-weight:800;max-width:15ch}
+.lede{margin-top:22px;font-size:18.5px;line-height:1.6;color:var(--soft);max-width:54ch}
+.lede strong{color:var(--text);font-weight:600}
+.hero .btns{margin-top:32px}
 
-/* experience timeline: a real sequence */
-.tl{list-style:none;margin-top:22px;position:relative}
-.tl:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl>li{position:relative;padding-left:28px;margin-top:22px}
-.tl>li:first-child{margin-top:0}
-.tl>li:after{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--royal)}
-.tl h3{font-size:17.5px;line-height:1.35;font-weight:700}
-.when{font-size:14.5px;color:var(--faint)}
-.tl p{margin-top:6px;color:var(--soft);max-width:58ch;font-size:16px}
+.idcard{position:relative;border-radius:24px;padding:1px;background:linear-gradient(160deg,rgba(94,234,212,.5),rgba(255,255,255,.06) 40%,rgba(122,167,255,.4));
+  max-width:380px;width:100%;justify-self:center}
+.idcard-in{border-radius:23px;background:linear-gradient(180deg,#141922,#0F1319);padding:22px;overflow:hidden}
+.portrait{border-radius:16px;overflow:hidden;aspect-ratio:1/1;background:#D9DEE6}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.idmeta{margin-top:18px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.idmeta h2{font-size:21px;letter-spacing:-.01em;line-height:1.2}
+.idmeta .ar{font-family:var(--arabic);font-size:16px;color:var(--soft);direction:rtl;text-align:left;margin-top:2px}
+.idmeta .loc{text-align:right;font-size:13.5px;color:var(--faint);line-height:1.5}
+.badges{margin-top:16px;display:grid;gap:8px}
+.badge{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--soft);padding:9px 12px;border-radius:10px;
+  background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.badge span{font-family:var(--mono);font-size:10.5px;font-weight:500;color:#0A0C10;padding:3px 6px;border-radius:5px;flex:none}
+
+/* stats */
+.stats{position:relative;z-index:1}
+.stats .grid{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg2)}
+@media (min-width:900px){.stats .grid{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat:nth-child(2n){border-right:0}
+@media (min-width:900px){.stat{border-bottom:0}.stat:nth-child(2n){border-right:1px solid var(--line)}.stat:last-child{border-right:0}}
+@media (max-width:899px){.stat:nth-last-child(-n+2){border-bottom:0}}
+.stat .n{font-size:clamp(28px,3.6vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.stat p{margin-top:8px;font-size:14px;line-height:1.5;color:var(--soft)}
+.stat .src{margin-top:10px;font-size:11px}
+@media (max-width:520px){.stat{padding:20px 16px}.stat p{font-size:13.5px}}
+
+/* sections */
+section.block{padding:112px 0 0;position:relative;z-index:1}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:40px}
+.head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.03em;line-height:1.1;font-weight:800}
+.head p{color:var(--soft);max-width:46ch;margin-top:10px}
+.head .more{font-size:14.5px;color:var(--soft);display:inline-flex;gap:6px;align-items:center}
+.head .more:hover{color:var(--text)}
+
+/* projects */
+.proj{display:grid;gap:0;border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden}
+.proj+.proj{margin-top:28px}
+@media (min-width:980px){
+  .proj{grid-template-columns:1.12fr 1fr}
+  .proj.flip .media{order:2;border-right:0;border-left:1px solid var(--line)}
+}
+.media{position:relative;background:radial-gradient(120% 90% at 0% 0%,rgba(94,234,212,.10),transparent 60%),var(--bg2);
+  padding:28px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);min-height:280px;overflow:hidden}
+@media (min-width:980px){.media{border-bottom:0;border-right:1px solid var(--line);padding:40px 36px}}
+.media.warm{background:radial-gradient(120% 90% at 100% 0%,rgba(245,185,92,.12),transparent 60%),var(--bg2)}
+.media.blue{background:radial-gradient(120% 90% at 0% 100%,rgba(122,167,255,.13),transparent 60%),var(--bg2)}
+.win{width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:#0B0D12;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.4);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.win .bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#151922;border-bottom:1px solid var(--line)}
+.win .bar i{width:9px;height:9px;border-radius:50%;background:#2A303B}
+.win .bar em{margin-left:10px;font-family:var(--mono);font-style:normal;font-size:10.5px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.proj:hover .win.main{transform:translateY(-4px)}
+.media a{display:block;width:100%}
+.float{position:absolute;width:34%;right:22px;bottom:22px;border-radius:10px;overflow:hidden;border:1px solid var(--line2);
+  box-shadow:0 24px 50px -12px rgba(0,0,0,.8);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.proj:hover .float{transform:translateY(-6px) rotate(-1deg)}
+@media (max-width:620px){.float{display:none}}
+.media .cap{position:absolute;left:16px;bottom:12px;font-size:10.5px}
+.media.has-float .win.main{margin-right:16%;margin-bottom:24px}
+@media (max-width:620px){.media.has-float .win.main{margin:0}}
+
+.body{padding:30px 28px 30px}
+@media (min-width:980px){.body{padding:40px 40px 36px}}
+.kick{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.idx{font-family:var(--mono);font-size:12.5px;color:var(--faint)}
+.tag{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid}
+.tag.live{color:#6EE7B7;border-color:rgba(110,231,183,.3);background:rgba(110,231,183,.07)}
+.tag.demo{color:var(--blue);border-color:rgba(122,167,255,.3);background:rgba(122,167,255,.07)}
+.tag.code{color:var(--amber);border-color:rgba(245,185,92,.3);background:rgba(245,185,92,.07)}
+.body h3{margin-top:16px;font-size:clamp(23px,2.4vw,28px);line-height:1.2;letter-spacing:-.02em;font-weight:700}
+.body .what{margin-top:12px;color:var(--soft);max-width:52ch}
+.kpis{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{padding:14px 14px 12px;border-radius:12px;background:var(--card2);border:1px solid var(--line)}
+.kpi b{display:block;font-size:22px;letter-spacing:-.02em;line-height:1.15;font-weight:700}
+.kpi span{display:block;margin-top:6px;font-size:12.5px;line-height:1.4;color:var(--soft)}
+@media (max-width:460px){.kpis{grid-template-columns:1fr}.kpi{display:flex;align-items:baseline;gap:12px}.kpi b{min-width:74px}.kpi span{margin-top:0}}
+details{margin-top:18px;border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0 4px;
+  font-size:14.5px;font-weight:600;color:var(--soft)}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--text)}
+summary svg{width:16px;height:16px;transition:transform .2s}
+details[open] summary svg{transform:rotate(45deg)}
+details ul{list-style:none;margin-top:8px}
+details li{position:relative;padding-left:18px;margin-top:9px;font-size:14.5px;line-height:1.6;color:var(--soft)}
+details li:before{content:"";position:absolute;left:2px;top:.68em;width:6px;height:6px;border-radius:2px;background:var(--teal)}
+details li strong{color:var(--text);font-weight:600}
+.stack{margin-top:20px;display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-family:var(--mono);font-size:11.5px;color:var(--soft);padding:4px 9px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.links .btn{height:42px;padding:0 16px;font-size:14.5px}
+
+/* experience */
+.xp{border-top:1px solid var(--line)}
+.row{display:grid;gap:6px 40px;padding:28px 0;border-bottom:1px solid var(--line)}
+@media (min-width:820px){.row{grid-template-columns:220px 1fr}}
+.row .when{font-family:var(--mono);font-size:13px;color:var(--faint);padding-top:3px}
+.row h3{font-size:19px;line-height:1.35;letter-spacing:-.01em;font-weight:650}
+.row h3 small{display:block;font-size:15px;font-weight:500;color:var(--soft);margin-top:2px}
+.row p{margin-top:10px;color:var(--soft);max-width:68ch;font-size:15.5px}
+.row ul{list-style:none;margin-top:10px}
+.row li{position:relative;padding-left:18px;margin-top:6px;color:var(--soft);font-size:15.5px;max-width:68ch}
+.row li:before{content:"→";position:absolute;left:0;color:var(--faint)}
 
 /* skills */
-.skills{margin-top:20px;display:grid;gap:18px}
-@media (min-width:700px){ .skills{grid-template-columns:1fr 1fr;column-gap:36px} }
-.skills h3{font-size:15.5px;font-weight:700}
-.skills p{font-size:15.5px;color:var(--soft);margin-top:2px}
+.skills{display:grid;gap:14px}
+@media (min-width:700px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1020px){.skills{grid-template-columns:repeat(3,1fr)}}
+.sk{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.sk h3{font-size:16px;font-weight:650;display:flex;align-items:center;gap:10px}
+.sk h3 i{width:8px;height:8px;border-radius:2px;background:var(--teal)}
+.sk .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.sk .chips span{font-size:13px;color:var(--soft);padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
 
 /* certs */
-.certs{margin-top:18px;display:grid;gap:12px}
-.cert{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.badge{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;flex:none}
-.cert h3{font-size:16px;line-height:1.35;font-weight:600}
-.cert p{font-size:14px;color:var(--faint);margin-top:2px;overflow-wrap:anywhere}
+.certs{display:grid;gap:14px;margin-top:14px}
+@media (min-width:820px){.certs{grid-template-columns:1fr 1fr}}
+.cert{display:flex;gap:16px;align-items:flex-start;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.cert .logo{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;flex:none}
+.cert h3{font-size:16px;line-height:1.4;font-weight:650}
+.cert p{margin-top:4px;font-size:13.5px;color:var(--faint);overflow-wrap:anywhere}
+.cert a{color:var(--teal)}
+.cert a:hover{text-decoration:underline;text-underline-offset:3px}
 
-/* closing */
-.close{margin-top:64px;background:var(--navy);color:#fff;border-radius:18px;padding:28px 24px}
-.close h2{color:#fff}
-.close p{color:#C9D6FF;margin-top:6px;max-width:44ch}
-.close .actions{margin-top:18px}
-footer{margin-top:28px;font-size:13.5px;color:var(--faint)}
+/* contact */
+.contact{margin-top:112px;position:relative;z-index:1}
+.cta{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line2);padding:56px 28px;text-align:center;
+  background:radial-gradient(80% 120% at 50% 0%,rgba(94,234,212,.14),transparent 60%),radial-gradient(60% 100% at 100% 100%,rgba(122,167,255,.12),transparent 60%),var(--card)}
+@media (min-width:820px){.cta{padding:80px 48px}}
+.cta h2{font-size:clamp(32px,5vw,54px);letter-spacing:-.035em;line-height:1.05;font-weight:800}
+.cta p{margin:16px auto 0;color:var(--soft);max-width:48ch;font-size:17.5px}
+.cta .mail{display:inline-block;margin-top:26px;font-size:clamp(15px,4.2vw,22px);white-space:nowrap;font-weight:600;border-bottom:1px solid var(--line2);padding-bottom:4px}
+@media (max-width:420px){.cta{padding:44px 18px}}
+.cta .mail:hover{border-color:var(--teal)}
+.cta .btns{justify-content:center;margin-top:30px}
+footer{padding:40px 0 48px;color:var(--faint);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a:hover{color:var(--text)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
-<div class="page">
+<div class="bgfx" aria-hidden="true"></div>
 
-<aside class="rail" aria-label="About Asmaa">
-  <svg class="net" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
-    <g stroke="#6E9BFF" stroke-opacity=".28" stroke-width="1.2">
-      <path d="M330 -10 300 90 380 160 290 260 410 330M300 90 220 40M290 260 230 360 300 470 250 600 330 700 280 820M230 360 150 330M300 470 410 520"/>
-    </g>
-    <g fill="#6E9BFF" fill-opacity=".45">
-      <circle cx="300" cy="90" r="4"/><circle cx="380" cy="160" r="3"/><circle cx="290" cy="260" r="4.5"/><circle cx="230" cy="360" r="3.5"/>
-      <circle cx="300" cy="470" r="4"/><circle cx="250" cy="600" r="3"/><circle cx="330" cy="700" r="4"/><circle cx="150" cy="330" r="3"/>
-    </g>
-  </svg>
-  <div class="rail-in">
-    <img class="me" src="photo.jpg" alt="Asmaa Samy" width="96" height="96">
-    <div class="names">
-      <h1>Asmaa Samy</h1>
-      <div class="ar" lang="ar">أسماء سامي</div>
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>AS</i>Asmaa Samy</a>
+    <div class="menu">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="cvbtn" href="Asmaa_Samy_AI_Engineer_CV.pdf" target="_blank" rel="noopener">CV</a>
     </div>
-    <p class="role">AI engineer for computer vision, OCR, LLMs and RAG, in Arabic and English.</p>
-    <div class="open"><i></i>Open to AI and data science roles</div>
-
-    <div class="actions">
-      <a class="btn cv" href="Asmaa_Samy_AI_Engineer_CV.pdf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>
-        Download my CV
-      </a>
-      <a class="btn" href="https://www.linkedin.com/in/asmaasamy22" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/asmaasamyhagag22-design" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-        GitHub
-      </a>
-      <a class="btn info hidden" href="infographic.pdf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>
-        Infographic
-      </a>
-      <a class="btn save" href="asmaa-samy.vcf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M19 8v6M16 11h6"/></svg>
-        Save contact
-      </a>
-    </div>
-
-    <div class="contact">
-      <a href="mailto:asmaasamyhagag22@gmail.com">asmaasamyhagag22@gmail.com</a><br>
-      <a href="tel:+201030439164">+20 103 043 9164</a><br>
-      Cairo, Egypt
-    </div>
-
-    <p class="tip">Every highlighted number on this page opens the details of how it was measured.</p>
   </div>
-</aside>
+</nav>
 
-<main>
-  <p class="lede">I build AI systems and check them before anyone else has to. My national-ID OCR service processed
-    <button class="cite" aria-expanded="false" aria-controls="e0">44,527 applications<sup>1</sup></button>
-    in its first production run.</p>
-    <p class="ev" id="e0" hidden>The first production run at the Ministry of Communications and IT. In production, 95.5% of the ID numbers the model read matched the number the applicant entered, across 44,305 applications.</p>
-  <p class="howto"><span>Tap any highlighted number to see the test behind it: sample size, method and what it was compared against.</span></p>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="pill"><b></b>Open to AI engineering roles</span>
+      <div class="mini"><img src="photo.jpg" alt="" width="64" height="64">
+        <div><b>Asmaa Samy</b><span>AI Engineer · Cairo, Egypt</span><span lang="ar" dir="rtl" style="text-align:left">أسماء سامي</span></div></div>
+      <p class="hello">Hi, I'm <strong>Asmaa Samy</strong>, an AI engineer in Cairo.</p>
+      <h1>I build AI systems that <span class="grad">hold up on real data.</span></h1>
+      <p class="lede">Computer vision, OCR, LLMs and RAG in Arabic and English, from model training to deployed services.
+        My national-ID OCR service processed <strong>44,527 applications</strong> in its first production run.</p>
+      <div class="btns">
+        <a class="btn primary" href="Asmaa_Samy_AI_Engineer_CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download CV</a>
+        <a class="btn" href="#work">See my work</a>
+        <a class="btn icon" href="https://github.com/asmaasamyhagag22-design" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+        <a class="btn icon" href="https://www.linkedin.com/in/asmaasamy22" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a class="btn icon" href="asmaa-samy.vcf" aria-label="Save contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M19 8v6M16 11h6"/></svg></a>
+      </div>
+    </div>
 
-  <!-- ===================== PROJECTS ===================== -->
-  <section aria-labelledby="work">
-    <h2 id="work">Selected work</h2>
-    <p class="sub">Three systems I built end to end, from data and models to the service people use.</p>
+    <aside class="idcard" aria-label="Profile">
+      <div class="idcard-in">
+        <div class="portrait"><img src="photo.jpg" alt="Asmaa Samy" width="480" height="480"></div>
+        <div class="idmeta">
+          <div><h2>Asmaa Samy</h2><div class="ar" lang="ar">أسماء سامي</div></div>
+          <div class="loc">AI Engineer<br>Cairo, Egypt</div>
+        </div>
+        <div class="badges">
+          <div class="badge"><span style="background:#FF9900">AWS</span>Certified ML Engineer – Associate</div>
+          <div class="badge"><span style="background:#F0626B">HCIA</span>Huawei Certified ICT Associate – AI</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section class="stats" aria-label="Highlights">
+  <div class="wrap">
+    <div class="grid rv">
+      <div class="stat"><div class="n">44,527</div><p>applications processed in the OCR service's first production run</p><div class="mono src">MCIT · production</div></div>
+      <div class="stat"><div class="n">95.8%</div><p>of ID cards read exactly on a locked held-out audit (342 of 357)</p><div class="mono src">OCR · audit</div></div>
+      <div class="stat"><div class="n">44→84%</div><p>retrieval hit@10 after isolating the embedding model as the bottleneck</p><div class="mono src">Musnad · 224 queries</div></div>
+      <div class="stat"><div class="n">0 / 211</div><p>simulated typing mistakes that ID verification silently accepted</p><div class="mono src">OCR · verification</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="mono">01 · Projects</div><h2>Selected work</h2>
+        <p>Three systems I built end to end, from data and models to the service people use.</p></div>
+      <a class="more" href="https://github.com/asmaasamyhagag22-design" target="_blank" rel="noopener">All repositories on GitHub →</a>
+    </div>
 
     <!-- OCR -->
-    <article class="proj prod">
-      <h3>Egyptian national-ID OCR and verification</h3>
-      <span class="status live">Used in production</span>
-      <p class="what">Reads the 14-digit national ID number from applicants' phone photos of their ID cards and checks it against the number they typed. A review console lets staff check the cases that disagree.</p>
-      <ul class="claims">
-        <li>A 113K-parameter digit reader I designed (a CNN encoder with 14 ordered attention slots instead of CTC) read
-          <button class="cite" aria-expanded="false" aria-controls="e1">95.8% of cards exactly<sup>2</sup></button>.
-          <span class="ev" id="e1" hidden>342 of 357 admitted cards, on a held-out audit set that was locked before testing, with pass criteria written down before the run.</span>
-        </li>
-        <li>Beat the previous production model on the same audit cards:
-          <button class="cite" aria-expanded="false" aria-controls="e2">+12 cards, 0 regressions<sup>3</sup></button>.
-          <span class="ev" id="e2" hidden>Same cards for both models. Exact sign test, p = 0.0005. No card that the old model read correctly was broken by the new one.</span>
-        </li>
-        <li>ID verification
-          <button class="cite" aria-expanded="false" aria-controls="e3">silently accepted 0 of 211<sup>4</sup></button>
-          simulated typing mistakes.
-          <span class="ev" id="e3" hidden>211 simulated typing mistakes in applicant-entered ID numbers. None of them passed verification unnoticed.</span>
-        </li>
-        <li>Traced production failures to their cause: recovered
-          <button class="cite" aria-expanded="false" aria-controls="e4">437 of 659 failed downloads<sup>5</sup></button>.
-          <span class="ev" id="e4" hidden>The failed images were found in an alternate folder. Most of the remaining 222 came from applicant folders that were missing or empty, not from the model.</span>
-        </li>
-        <li>Shipped as a Dockerized FastAPI service at
-          <button class="cite" aria-expanded="false" aria-controls="e5">0.7 s per image on CPU<sup>6</sup></button>.
-          <span class="ev" id="e5" hidden>Median latency per image, no GPU. The service has golden self-tests, hash-pinned models, one-tag rollback, and a human review console that shows accuracy bounds as Wilson intervals.</span>
-        </li>
-      </ul>
-      <p class="stack">Python, TensorFlow/Keras, PaddleOCR, OpenCV, FastAPI, Docker</p>
-      <div class="links"><a href="https://github.com/asmaasamyhagag22-design/OCR-IDs" target="_blank" rel="noopener">Code on GitHub</a></div>
+    <article class="proj rv">
+      <div class="media">
+        <a href="images/ocr-console.webp" target="_blank" rel="noopener" aria-label="Open the review console screenshot">
+          <div class="win main"><div class="bar"><i></i><i></i><i></i><em>Fixed14 Console · review dashboard</em></div>
+            <img src="images/ocr-console.webp" alt="Arabic review console showing accuracy before and after human review, review decisions and reasons reads failed" width="1440" height="1030" loading="lazy"></div>
+        </a>
+        <span class="mono cap">Synthetic demo data</span>
+      </div>
+      <div class="body">
+        <div class="kick"><span class="idx">01</span><span class="tag live">Used in production</span></div>
+        <h3>Egyptian national-ID OCR and verification</h3>
+        <p class="what">Reads the 14-digit national ID number from applicants' phone photos and checks it against the number they typed. Staff review only the cases that disagree.</p>
+        <div class="kpis">
+          <div class="kpi"><b>95.5%</b><span>matched in production, 44,305 applications</span></div>
+          <div class="kpi"><b>+12 / 0</b><span>cards gained / regressions vs. old model</span></div>
+          <div class="kpi"><b>0.7 s</b><span>median per image, CPU only</span></div>
+        </div>
+        <details>
+          <summary>How it was built and measured<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <ul>
+            <li>Designed a <strong>113K-parameter digit reader</strong>: a CNN encoder with 14 ordered attention slots instead of CTC.</li>
+            <li>Read <strong>342 of 357</strong> admitted cards exactly on a held-out audit that was locked before testing, with pass criteria written down before the run.</li>
+            <li>Against the previous production model on the same cards: <strong>+12 cards, 0 regressions</strong> (exact sign test, p = 0.0005).</li>
+            <li>Traced production failures: recovered <strong>437 of 659</strong> failed downloads from an alternate folder; most of the other 222 were missing or empty applicant folders.</li>
+            <li>Dockerized FastAPI service with golden self-tests, hash-pinned models, one-tag rollback, and a review console with Wilson-interval accuracy bounds.</li>
+          </ul>
+        </details>
+        <div class="stack"><span>Python</span><span>TensorFlow/Keras</span><span>PaddleOCR</span><span>OpenCV</span><span>FastAPI</span><span>Docker</span></div>
+        <div class="links"><a class="btn" href="https://github.com/asmaasamyhagag22-design/OCR-IDs" target="_blank" rel="noopener">View code ↗</a></div>
+      </div>
     </article>
 
     <!-- Musnad -->
-    <article class="proj">
-      <h3>Musnad: Arabic hadith answers with verified citations</h3>
-      <span class="status demo">Live demo on AWS</span>
-      <p class="what">Ask a question about hadith in Arabic and get an answer where every claim cites its source, plus narrator chains pulled from a graph instead of written by the model.</p>
-      <ul class="claims">
-        <li>Nearly doubled retrieval hit@10, from
-          <button class="cite" aria-expanded="false" aria-controls="e6">44% to 84%<sup>7</sup></button>, by finding which part of the pipeline was the bottleneck.
-          <span class="ev" id="e6" hidden>224 synthetic development queries. I compared 5 embedding models, 3 rerankers and document expansion, and found the embedding model was the bottleneck. I kept the simplest setup because McNemar tests showed no significant gain from 4-way fusion.</span>
-        </li>
-        <li>Citations are <button class="cite" aria-expanded="false" aria-controls="e7">96% correct, 0% out of context<sup>8</sup></button>, and the code enforces it.
-          <span class="ev" id="e7" hidden>27 hand-verified questions, 6 runs each. Enforced in code: a validator checks every citation, the model gets one targeted retry, and the system refuses rather than show an unsupported answer.</span>
-        </li>
-        <li>Narrator chains come from a graph of
-          <button class="cite" aria-expanded="false" aria-controls="e8">14,155 isnads<sup>9</sup></button>, so the model never invents a narrator.
-          <span class="ev" id="e8" hidden>A SQLite graph of 14,155 isnads and 2,092 narrators linked to 7,015 hadiths. A chain is retrieved in about 2 ms and is never generated by the model. On 25 of 25 narrator-chain questions, there were zero invented narrators.</span>
-        </li>
-        <li>Found that diacritized Arabic cost
-          <button class="cite" aria-expanded="false" aria-controls="e9">3.59× more tokens<sup>10</sup></button>, so the index searches plain text and shows readers the original.
-          <span class="ev" id="e9" hidden>The tokenizer split diacritized Arabic into 3.59× more tokens than the same text without diacritics. So the index stores undiacritized text, and answers show the reader the original diacritized text.</span>
-        </li>
-        <li>A tool-calling agent sits behind a deterministic router, which reached
-          <button class="cite" aria-expanded="false" aria-controls="e10">93% routing recall<sup>11</sup></button>.
-          <span class="ev" id="e10" hidden>On unseen questions, with 0 false agent triggers on hard negatives. I tested sending every question through the agent instead: it needed 85% more model calls and refused less reliably, so I rejected it.</span>
-        </li>
-      </ul>
-      <p class="stack">Python, Gemini on Vertex AI, sentence-transformers, FAISS, SQLite, Streamlit, AWS CDK (ECS Fargate, ALB, DynamoDB), GitHub Actions</p>
-      <div class="links">
-        <a href="https://asmaasamyhagag22-design.github.io/musnad" target="_blank" rel="noopener">Try the live demo</a>
-        <a href="https://github.com/asmaasamyhagag22-design/Hadith-Agentic-GraphRAG" target="_blank" rel="noopener">Code on GitHub</a>
+    <article class="proj flip rv">
+      <div class="media blue has-float">
+        <a href="images/musnad-architecture.webp" target="_blank" rel="noopener" aria-label="Open the Musnad architecture diagram">
+          <div class="win main"><div class="bar"><i></i><i></i><i></i><em>Musnad · system architecture</em></div>
+            <img src="images/musnad-architecture.webp" alt="Musnad architecture: offline indexing, routed question answering with a chain agent, validators and the sanad graph, and quality gates" width="1600" height="1140" loading="lazy"></div>
+        </a>
+        <div class="float"><img src="images/musnad-demo.webp" alt="Musnad answering an Arabic question with the narrator chain and source" width="1600" height="1111" loading="lazy"></div>
+      </div>
+      <div class="body">
+        <div class="kick"><span class="idx">02</span><span class="tag demo">Live demo on AWS</span></div>
+        <h3>Musnad: Arabic hadith answers with verified citations</h3>
+        <p class="what">Ask about hadith in Arabic and get an answer where every claim cites its source, with narrator chains pulled from a graph instead of written by the model.</p>
+        <div class="kpis">
+          <div class="kpi"><b>84%</b><span>retrieval hit@10, up from 44%</span></div>
+          <div class="kpi"><b>96%</b><span>correct citations, 0% out of context</span></div>
+          <div class="kpi"><b>0</b><span>invented narrators on 25 of 25 chain questions</span></div>
+        </div>
+        <details>
+          <summary>How it was built and measured<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <ul>
+            <li>Compared <strong>5 embedders, 3 rerankers</strong> and document expansion on 224 development queries; kept the simplest setup because McNemar tests showed no significant gain from 4-way fusion.</li>
+            <li>Citations checked on <strong>27 hand-verified questions, 6 runs each</strong>, and enforced in code: a validator, one targeted retry, then refusal.</li>
+            <li>SQLite sanad graph of <strong>14,155 isnads</strong> and 2,092 narrators linked to 7,015 hadiths; chains come back in about 2 ms.</li>
+            <li>The tokenizer split diacritized Arabic into <strong>3.59× more tokens</strong>, so the index searches plain text and answers show the original.</li>
+            <li>Tool-calling agent behind a deterministic router: <strong>93% routing recall</strong> on unseen questions, 0 false triggers on hard negatives.</li>
+            <li>Rate-limited public demo on AWS with CDK (ECS Fargate, ALB, DynamoDB usage caps); CI fails if README numbers drift from the experiment log.</li>
+          </ul>
+        </details>
+        <div class="stack"><span>Gemini on Vertex AI</span><span>sentence-transformers</span><span>FAISS</span><span>SQLite</span><span>Streamlit</span><span>AWS CDK</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://asmaasamyhagag22-design.github.io/musnad" target="_blank" rel="noopener">Try the live demo ↗</a>
+          <a class="btn" href="https://github.com/asmaasamyhagag22-design/Hadith-Agentic-GraphRAG" target="_blank" rel="noopener">View code ↗</a>
+        </div>
       </div>
     </article>
 
     <!-- ADZY -->
-    <article class="proj">
-      <h3>ADZY: marketing campaigns grounded in evidence</h3>
-      <span class="status code">Full system on GitHub</span>
-      <p class="what">Give it a business website. It researches the business and writes Arabic and English campaign copy where every claim links to evidence from the site, then renders posters that a human approves before export.</p>
-      <ul class="claims">
-        <li>LangGraph strategy review that can pause, resume and recover after a crash, traced with Langfuse.</li>
-        <li>Each approval is bound to the exact campaign revision and poster preview, so an approval of an older version is rejected.</li>
-        <li>Release gates run
-          <button class="cite" aria-expanded="false" aria-controls="e11">frozen regression evals<sup>12</sup></button>
-          that block any version that gets worse.
-          <span class="ev" id="e11" hidden>Including 10 synthetic evidence-context cases with injected faults: dropped source conditions, the wrong product selected, and unsupported claims. A candidate that regresses on any of them is blocked from release.</span>
-        </li>
-        <li>Exports survive a
-          <button class="cite" aria-expanded="false" aria-controls="e12">PostgreSQL backup and restore<sup>13</sup></button>.
-          <span class="ev" id="e12" hidden>Verified byte for byte: an export produced after restoring from backup is identical to the original.</span>
-        </li>
-      </ul>
-      <p class="stack">Python, FastAPI, PostgreSQL, Alembic, LangGraph, Langfuse, Gemini on Vertex AI, Playwright, Docker, GitHub Actions</p>
-      <div class="links"><a href="https://github.com/asmaasamyhagag22-design/adzy" target="_blank" rel="noopener">Code on GitHub</a></div>
+    <article class="proj rv">
+      <div class="media warm">
+        <a href="images/adzy-workflow.webp" target="_blank" rel="noopener" aria-label="Open the ADZY review screen">
+          <div class="win main"><div class="bar"><i></i><i></i><i></i><em>ADZY · campaign review</em></div>
+            <img src="images/adzy-workflow.webp" alt="ADZY review screen with Arabic campaign copy and required human checks, next to the approved poster" width="1050" height="605" loading="lazy"></div>
+        </a>
+        <span class="mono cap">Independent portfolio concept</span>
+      </div>
+      <div class="body">
+        <div class="kick"><span class="idx">03</span><span class="tag code">Full system on GitHub</span></div>
+        <h3>ADZY: marketing campaigns grounded in evidence</h3>
+        <p class="what">Give it a business website. It researches the business, writes Arabic and English campaign copy where every claim links to evidence, and renders posters a human approves before export.</p>
+        <div class="kpis">
+          <div class="kpi"><b>10</b><span>fault-injection cases gate every release</span></div>
+          <div class="kpi"><b>Exact</b><span>approval bound to revision + preview hashes</span></div>
+          <div class="kpi"><b>Byte-exact</b><span>export recovery after PostgreSQL restore</span></div>
+        </div>
+        <details>
+          <summary>How it was built and measured<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <ul>
+            <li>Checkpointed <strong>LangGraph</strong> strategy review that can pause, resume and recover after a crash, traced with <strong>Langfuse</strong>.</li>
+            <li>Each approval is bound to the exact campaign revision and both poster-preview hashes, so <strong>stale approvals are rejected</strong>.</li>
+            <li>Frozen regression evals with injected faults (dropped source conditions, wrong product, unsupported claims); a candidate that regresses is <strong>blocked from release</strong>.</li>
+            <li>Exports verified <strong>byte for byte</strong> after a PostgreSQL backup and restore.</li>
+          </ul>
+        </details>
+        <div class="stack"><span>FastAPI</span><span>PostgreSQL</span><span>Alembic</span><span>LangGraph</span><span>Langfuse</span><span>Playwright</span><span>Docker</span></div>
+        <div class="links">
+          <a class="btn" href="https://github.com/asmaasamyhagag22-design/adzy" target="_blank" rel="noopener">View code ↗</a>
+          <a class="btn info hidden" href="infographic.pdf" target="_blank" rel="noopener">One-page case study ↗</a>
+        </div>
+      </div>
     </article>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section aria-labelledby="exp">
-    <h2 id="exp">Experience and training</h2>
-    <ol class="tl" reversed>
-      <li>
-        <h3>AI and Data Science Trainee, Ministry of Communications and IT (MCIT)</h3>
-        <div class="when">Sep 2026 – Nov 2026 · Cairo</div>
-        <p>Built and deployed the national-ID OCR and verification service, from model training to handover. On TuT AI, the team's locally hosted AI platform, I built the notebooks feature and its source citations. I also built a research chat on local models that answers from documents and the web, checks every sentence against its sources before showing it, and turns the answer into a PowerPoint deck.</p>
-      </li>
-      <li>
-        <h3>AI and Data Science Trainee, Digilians Applied AI Program</h3>
+<!-- ============ EXPERIENCE ============ -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="head rv"><div><div class="mono">02 · Experience</div><h2>Experience and training</h2></div></div>
+    <div class="xp">
+      <div class="row rv">
+        <div class="when">Sep – Nov 2026</div>
+        <div>
+          <h3>AI and Data Science Trainee<small>Ministry of Communications and IT (MCIT) · Cairo</small></h3>
+          <ul>
+            <li>Built and deployed the national-ID OCR and verification service, from model training to handover.</li>
+            <li>On TuT AI, the team's locally hosted AI platform, built the notebooks feature and its source citations.</li>
+            <li>Built a research chat on local models that answers from documents and the web, checks every sentence against its sources, and turns the answer into a PowerPoint deck.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row rv">
         <div class="when">Dec 2025 – Sep 2026</div>
-        <p>Built ML workflows on real datasets: preprocessing, feature engineering, supervised models, held-out evaluation and error analysis. Selected among the program's distinguished trainees.</p>
-      </li>
-      <li>
-        <h3>AI and Machine Learning Program, NTI and Huawei Egyptian Talent Academy</h3>
-        <div class="when">Mar 2025 – Jun 2025</div>
-        <p>Completed the applied AI and machine learning program with a 95% final score.</p>
-      </li>
-      <li>
-        <h3>B.Sc. in Computer Science, 6 October University</h3>
-        <div class="when">2020 – 2024 · Giza</div>
-        <p>Graduation project, graded Excellent: a CNN pipeline that diagnoses chest diseases from medical images.</p>
-      </li>
-    </ol>
-  </section>
+        <div>
+          <h3>AI and Data Science Trainee<small>Digilians Applied AI Program</small></h3>
+          <p>ML workflows on real datasets: preprocessing, feature engineering, supervised models, held-out evaluation and error analysis. Selected among the program's distinguished trainees.</p>
+        </div>
+      </div>
+      <div class="row rv">
+        <div class="when">Mar – Jun 2025</div>
+        <div>
+          <h3>AI and Machine Learning Program<small>NTI and Huawei Egyptian Talent Academy</small></h3>
+          <p>Completed the applied AI and machine learning program with a 95% final score.</p>
+        </div>
+      </div>
+      <div class="row rv">
+        <div class="when">2020 – 2024</div>
+        <div>
+          <h3>B.Sc. in Computer Science<small>6 October University · Giza</small></h3>
+          <p>Graduation project, graded Excellent: a CNN pipeline that diagnoses chest diseases from medical images.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ===================== SKILLS ===================== -->
-  <section aria-labelledby="sk">
-    <h2 id="sk">What I work with</h2>
+<!-- ============ SKILLS ============ -->
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="head rv"><div><div class="mono">03 · Toolkit</div><h2>What I work with</h2>
+      <p>Arabic is my native language; I work in English.</p></div></div>
     <div class="skills">
-      <div><h3>LLMs and agents</h3><p>RAG, LangGraph, LangChain, tool calling, structured outputs, Gemini on Vertex AI, Ollama</p></div>
-      <div><h3>Retrieval and Arabic NLP</h3><p>Hybrid search (BM25 + embeddings), reranking, FAISS, ChromaDB, sentence-transformers, Arabic normalization, diacritics and tokenization</p></div>
-      <div><h3>Computer vision and OCR</h3><p>OpenCV, PaddleOCR, RapidOCR, Docling, YOLO (Ultralytics), document AI</p></div>
-      <div><h3>Machine learning</h3><p>Deep learning, CNNs, attention, TensorFlow/Keras, PyTorch, scikit-learn, pandas, NumPy</p></div>
-      <div><h3>Backend and deployment</h3><p>Python, SQL, FastAPI, PostgreSQL, SQLite, Alembic, Docker, Linux, GitHub Actions, AWS (ECS Fargate, ALB, CDK, Secrets Manager, DynamoDB)</p></div>
-      <div><h3>Evaluation</h3><p>Held-out test sets, regression testing, hit@k, MRR, McNemar tests, error analysis, Langfuse, model versioning and rollback</p></div>
+      <div class="sk rv"><h3><i></i>LLMs and agents</h3><div class="chips"><span>RAG</span><span>LangGraph</span><span>LangChain</span><span>Tool calling</span><span>Structured outputs</span><span>Gemini on Vertex AI</span><span>Ollama</span></div></div>
+      <div class="sk rv"><h3><i></i>Retrieval and Arabic NLP</h3><div class="chips"><span>Hybrid search (BM25 + embeddings)</span><span>Reranking</span><span>FAISS</span><span>ChromaDB</span><span>sentence-transformers</span><span>Arabic normalization</span></div></div>
+      <div class="sk rv"><h3><i></i>Computer vision and OCR</h3><div class="chips"><span>OpenCV</span><span>PaddleOCR</span><span>RapidOCR</span><span>Docling</span><span>YOLO</span><span>Document AI</span></div></div>
+      <div class="sk rv"><h3><i></i>Machine learning</h3><div class="chips"><span>Deep learning</span><span>CNNs</span><span>Attention</span><span>TensorFlow/Keras</span><span>PyTorch</span><span>scikit-learn</span><span>pandas</span></div></div>
+      <div class="sk rv"><h3><i></i>Backend and deployment</h3><div class="chips"><span>Python</span><span>SQL</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>GitHub Actions</span><span>AWS (ECS Fargate, CDK)</span></div></div>
+      <div class="sk rv"><h3><i></i>Evaluation and MLOps</h3><div class="chips"><span>Held-out test sets</span><span>Regression testing</span><span>hit@k, MRR</span><span>McNemar tests</span><span>Error analysis</span><span>Langfuse</span><span>Rollback</span></div></div>
     </div>
-    <p class="sub" style="margin-top:18px">Arabic is my native language; I work in English.</p>
-  </section>
 
-  <!-- ===================== CERTS ===================== -->
-  <section aria-labelledby="ce">
-    <h2 id="ce">Certifications</h2>
     <div class="certs">
-      <div class="cert"><div class="badge" style="background:#232F3E">AWS</div>
+      <div class="cert rv"><div class="logo" style="background:#232F3E;color:#FF9900">AWS</div>
         <div><h3>AWS Certified Machine Learning Engineer – Associate</h3>
-          <p>Valid Aug 2026 – Aug 2029 · Credential ID 6f85eee6d389404e94c60e5c45cc2d7b · <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener">Verify</a></p></div></div>
-      <div class="cert"><div class="badge" style="background:#C7000B">HCIA</div>
+          <p>Aug 2026 – Aug 2029 · ID 6f85eee6d389404e94c60e5c45cc2d7b · <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener">Verify</a></p></div></div>
+      <div class="cert rv"><div class="logo" style="background:#C7000B">HCIA</div>
         <div><h3>Huawei Certified ICT Associate – Artificial Intelligence</h3>
-          <p>Valid Aug 2026 – Aug 2029 · Certificate No. 010102001855810447091409 · Verify on Huawei Talent</p></div></div>
+          <p>Aug 2026 – Aug 2029 · No. 010102001855810447091409 · Verify on Huawei Talent</p></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== CLOSE ===================== -->
-  <section class="close" aria-labelledby="ct">
-    <h2 id="ct">Let's talk</h2>
-    <p>I'm looking for an AI engineer role where models have to work on real data, not only in a notebook.</p>
-    <div class="actions">
-      <a class="btn cv" href="mailto:asmaasamyhagag22@gmail.com">Email me</a>
-      <a class="btn" href="Asmaa_Samy_AI_Engineer_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="btn" href="asmaa-samy.vcf">Save contact</a>
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cta rv">
+      <div class="mono">04 · Contact</div>
+      <h2 style="margin-top:14px">Let's build something <span class="grad">that works.</span></h2>
+      <p>I'm looking for an AI engineering role where models have to work on real data, not only in a notebook.</p>
+      <a class="mail" href="mailto:asmaasamyhagag22@gmail.com">asmaasamyhagag22@gmail.com</a>
+      <div class="btns">
+        <a class="btn primary" href="mailto:asmaasamyhagag22@gmail.com">Email me</a>
+        <a class="btn" href="Asmaa_Samy_AI_Engineer_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="asmaa-samy.vcf">Save contact</a>
+        <a class="btn" href="https://www.linkedin.com/in/asmaasamy22" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>Asmaa Samy Hagag Elsayed · AI Engineer · Egypt</footer>
-</main>
-</div>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Asmaa Samy Hagag · AI Engineer · Cairo, Egypt</span>
+    <span><a href="tel:+201030439164">+20 103 043 9164</a> · <a href="https://github.com/asmaasamyhagag22-design" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
 
 <script>
-// Evidence citations: each highlighted number toggles the note that explains how it was measured.
-document.querySelectorAll('.cite').forEach(function(b){
-  b.addEventListener('click',function(){
-    var ev=document.getElementById(b.getAttribute('aria-controls'));
-    var open=b.getAttribute('aria-expanded')==='true';
-    b.setAttribute('aria-expanded',String(!open));
-    ev.hidden=open;
-  });
-});
-// Show the Infographic button only when infographic.pdf exists in the repo.
+document.documentElement.classList.replace('no-js','js');
+// Reveal on scroll
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+// Nav border + active section
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var links={};document.querySelectorAll('.menu a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){
+      var a=links[e.target.id];if(a&&e.isIntersecting){Object.values(links).forEach(function(x){x.classList.remove('on')});a.classList.add('on');}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  }
+})();
+// Show the case-study button only when infographic.pdf exists
 fetch('infographic.pdf',{method:'HEAD'}).then(function(r){
-  if(r.ok){ document.querySelectorAll('.info').forEach(function(e){e.classList.remove('hidden')}); document.querySelector('.rail .actions').classList.add('has-info'); }
+  if(r.ok) document.querySelectorAll('.info').forEach(function(e){e.classList.remove('hidden')});
 }).catch(function(){});
 </script>
 </body>
